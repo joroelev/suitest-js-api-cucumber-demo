@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An example of Suitest <-> Cucumber integration",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "interactive": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f json:report/cucumber_report.json",
     "interactive:home": "suitest interactive cucumber-js --tags \\\"@e2e and @home\\\" -f json:report/cucumber_report.json",
