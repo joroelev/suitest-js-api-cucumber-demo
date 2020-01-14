@@ -1,0 +1,23 @@
+{
+  "name": "suitest-js-api-cucumber-demo",
+  "version": "1.0.0",
+  "description": "An example of Suitest <-> Cucumber integration",
+  "main": "index.js",
+  "scripts": {
+    "interactive": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f json:report/cucumber_report.json",
+    "interactive:home": "suitest interactive cucumber-js --tags \\\"@e2e and @home\\\" -f json:report/cucumber_report.json",
+    "interactive:video": "suitest interactive cucumber-js --tags \\\"@e2e and @video\\\" -f json:report/cucumber_report.json",
+    "interactive:image": "suitest interactive cucumber-js --tags \\\"@e2e and @image\\\" -f json:report/cucumber_report.json",
+    "interactive:category": "suitest interactive cucumber-js --tags \\\"@e2e and @category\\\" -f json:report/cucumber_report.json",
+    "interactive:smoke": "suitest interactive cucumber-js --tags \\\"@smoke\\\" -f json:report/cucumber_report.json",
+    "automated": "suitest automated -t=$SUITEST_TEST_PACK_ID -k=$SUITEST_TOKEN_KEY -p=$SUITEST_TOKEN_PASSWORD cucumber-js --tags \\\"@e2e\\\"",
+    "automated:smoke": "suitest automated -t=$SUITEST_TEST_PACK_ID -k=$SUITEST_TOKEN_KEY -p=$SUITEST_TOKEN_PASSWORD cucumber-js --tags \\\"@smoke\\\"",
+    "report:html": "node ./report.js"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.1.0",
+    "node-fetch": "^2.6.0",
+    "suitest-js-api": "^1.16.2"
+  }
+}
