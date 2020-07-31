@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "interactive": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f json:report/cucumber_report.json -f summary",
+    "interactive:junit": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f node_modules/cucumber-junit-formatter:report/cucumber_report.xml -f summary",
     "interactive:home": "suitest interactive cucumber-js --tags \\\"@e2e and @home\\\" -f json:report/cucumber_report.json -f summary",
     "interactive:video": "suitest interactive cucumber-js --tags \\\"@e2e and @video\\\" -f json:report/cucumber_report.json -f summary",
     "interactive:image": "suitest interactive cucumber-js --tags \\\"@e2e and @image\\\" -f json:report/cucumber_report.json -f summary",
@@ -18,7 +19,8 @@
   "devDependencies": {
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.1.0",
+    "cucumber-junit-formatter": "^0.2.2",
     "node-fetch": "^2.6.0",
-    "suitest-js-api": "^1.17.0"
+    "suitest-js-api": "^1.17.6"
   }
 }
