@@ -1,26 +1,24 @@
 {
   "name": "suitest-js-api-cucumber-demo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An example of Suitest <-> Cucumber integration",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "interactive": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f json:report/cucumber_report.json -f summary",
-    "interactive:junit": "suitest interactive cucumber-js --tags \\\"@e2e\\\" -f node_modules/cucumber-junit-formatter:report/cucumber_report.xml -f summary",
-    "interactive:home": "suitest interactive cucumber-js --tags \\\"@e2e and @home\\\" -f json:report/cucumber_report.json -f summary",
-    "interactive:video": "suitest interactive cucumber-js --tags \\\"@e2e and @video\\\" -f json:report/cucumber_report.json -f summary",
-    "interactive:image": "suitest interactive cucumber-js --tags \\\"@e2e and @image\\\" -f json:report/cucumber_report.json -f summary",
-    "interactive:category": "suitest interactive cucumber-js --tags \\\"@e2e and @category\\\" -f json:report/cucumber_report.json -f summary",
-    "interactive:smoke": "suitest interactive cucumber-js --tags \\\"@smoke\\\" -f json:report/cucumber_report.json -f summary",
-    "automated": "suitest automated -t=$SUITEST_TEST_PACK_ID -k=$SUITEST_TOKEN_KEY -p=$SUITEST_TOKEN_PASSWORD cucumber-js --tags \\\"@e2e\\\" -f json:report/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.json -f summary",
-    "automated:smoke": "suitest automated -t=$SUITEST_TEST_PACK_ID -k=$SUITEST_TOKEN_KEY -p=$SUITEST_TOKEN_PASSWORD cucumber-js --tags \\\"@smoke\\\" -f json:report/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.json -f summary",
+    "start": "suitest run cucumber-js --tags \\\"@e2e\\\" -f json:report/cucumber_report.json -f summary",
+    "start:junit": "suitest run cucumber-js --tags \\\"@e2e\\\" -f node_modules/cucumber-junit-formatter:report/cucumber_report.xml -f summary",
+    "start:home": "suitest run cucumber-js --tags \\\"@e2e and @home\\\" -f json:report/cucumber_report.json -f summary",
+    "start:video": "suitest run cucumber-js --tags \\\"@e2e and @video\\\" -f json:report/cucumber_report.json -f summary",
+    "start:smoke": "suitest run cucumber-js --tags \\\"@smoke\\\" -f json:report/cucumber_report.json -f summary",
+    "parallel": "suitest run --config-file=.suitestrc.parallel.json cucumber-js --tags \\\"@e2e\\\" -f json:report/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.json -f summary",
+    "parallel:smoke": "suitest run --config-file=.suitestrc.parallel.json cucumber-js --tags \\\"@smoke\\\" -f json:report/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.json -f summary",
+    "parallel:smoke:windows": "suitest run --config-file=.suitestrc.parallel.json cucumber-js --tags \\\"@smoke\\\" -f \\\"json:report/%SUITEST_CHILD_PROCESS:|=_pid_%.json\\\" -f summary",
     "report:html": "node ./report.js"
   },
   "devDependencies": {
     "cucumber": "^6.0.5",
-    "cucumber-html-reporter": "^5.1.0",
+    "cucumber-html-reporter": "^5.5.0",
     "cucumber-junit-formatter": "^0.2.2",
-    "node-fetch": "^2.6.0",
-    "suitest-js-api": "^1.17.6"
+    "suitest-js-api": "^3.0.2"
   }
 }
