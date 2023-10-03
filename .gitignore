@@ -3,6 +3,8 @@
 .DS_Store
 node_modules
 .suitestrc
+.suitestrc.base.json
+.suitestrc.json
 
 # reporting
 report

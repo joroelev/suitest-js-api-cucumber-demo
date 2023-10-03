@@ -1,5 +1,0 @@
-{
-  "extends": ".suitestrc.base.json",
-  "deviceId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "appConfigId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-}
